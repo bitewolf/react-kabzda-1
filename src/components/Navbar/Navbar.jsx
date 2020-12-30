@@ -10,11 +10,11 @@ const Navbar = () => {
     return (
         <nav className={s.nav}>
         <div className={s.item}>
-         <img className={s.icon} src={profileLogo} alt=""/>
+         <img className={s.active ? s.iconActive : s.icon} src={profileLogo} alt=""/>
          <NavLink to="/profile" activeClassName={s.active}>Profile</NavLink> 
         </div>  
         <div className={s.item}>
-        <img className={s.icon} src={messagesLogo} alt=""/>
+        <img className={s.icon} src={messagesLogo} alt=""/> 
          <NavLink to="/dialogs" activeClassName={s.active}>Messages</NavLink> 
         </div>  
         <div className={s.item}>

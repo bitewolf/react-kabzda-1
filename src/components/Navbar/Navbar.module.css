@@ -34,6 +34,10 @@
   width: 17px;
   height: 17px;
 }
-.item:first-child{
-  filter: invert(19%) sepia(97%) saturate(2124%) hue-rotate(182deg) brightness(99%) contrast(101%) opacity(100%)
+.iconActive {
+  filter: invert(19%) sepia(97%) saturate(2124%) hue-rotate(182deg) brightness(99%) contrast(101%) opacity(100%);
+  padding: 0 5px 0 20px;
+  width: 17px;
+  height: 17px;
+
 }

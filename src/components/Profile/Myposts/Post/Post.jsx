@@ -3,10 +3,10 @@ const Post = (props) => {
     return (
         <div className={s.item}>
           <img src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" alt=""/>
-          {props.message}
-          <div>
-          <span>{props.likes}</span>
-          </div>
+         
+          <div> {props.message}</div>
+          <div> ♥{props.likes}</div>
+          
           
         </div>
     )

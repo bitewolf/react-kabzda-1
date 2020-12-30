@@ -1,6 +1,16 @@
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
 const MyPosts = () => {
+
+  let post__data = [
+    {likes: 1000, message: 'hi, how a you?'},
+    {likes: 2, message: 'олололо'},
+    {likes: 93, message: 'тролололо'},
+    {likes: 40, message: 'кек'},
+    {likes: 1, message: 'пыщ'},
+    {likes: 16, message: 'lil'}
+]
+
     return (
       <div>
       <h3>my posts</h3>
@@ -15,12 +25,9 @@ const MyPosts = () => {
         
       </div>
       <div className={s.posts}>
-        <Post message='hi, how a you?' likes='1 like'/>
-        <Post message='олололо' likes='3 likes'/>
-        <Post message='тролололо' likes='2 лейпцига'/>
-        <Post message='кек' likes='5 лукасов'/>
-        <Post message='пыщ' likes='77 луцианосов'/>
-        
+        <Post message={post__data[0].message} likes={post__data[0].likes}/>
+        <Post message={post__data[1].message} likes={post__data[1].likes}/>
+       
       </div>
     </div>
     )

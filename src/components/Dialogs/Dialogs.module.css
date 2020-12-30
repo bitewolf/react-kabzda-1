@@ -1,0 +1,38 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+}
+
+.dialogs__items {
+    padding: 10px;
+}
+.dialogs__item {
+    padding: 5px 0 5px 10px;
+    
+}
+.dialogs__item a{
+    
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    text-decoration: none;
+}
+
+.dialogs__item a.active{
+    color: #006699;
+  }
+  
+
+
+.dialogs__messages {
+    padding: 10px;
+}
+
+.dialogs__message {
+
+}
+
+.dialogs__items  .active {
+    color: goldenrod;
+}

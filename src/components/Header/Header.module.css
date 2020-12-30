@@ -1,0 +1,21 @@
+.header {
+    grid-area: h;
+    background-color:white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: flex;
+    align-items: center;
+  }
+
+.header img {
+    padding-left: 25px;
+    width: 33px;
+    filter: invert(19%) sepia(97%) saturate(2124%) hue-rotate(182deg) brightness(99%) contrast(101%) opacity(100%);
+  }
+
+.header span {
+  color: #006699;
+  font-weight: 700;
+}
+  

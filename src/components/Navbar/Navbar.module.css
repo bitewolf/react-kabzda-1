@@ -1,0 +1,39 @@
+.nav {
+  grid-area: n;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.item {
+  display: flex;
+  align-content: center;
+  padding: 10px;
+  
+  
+}
+
+.item a.active{
+  color: black;
+}
+
+.item a {
+  height: auto;
+  padding-left: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+  text-decoration: none;
+}
+
+.icon {
+  filter: invert(19%) sepia(97%) saturate(2124%) hue-rotate(182deg) brightness(99%) contrast(101%) opacity(15%);
+  padding: 0 5px 0 20px;
+  width: 17px;
+  height: 17px;
+}
+.item:first-child{
+  filter: invert(19%) sepia(97%) saturate(2124%) hue-rotate(182deg) brightness(99%) contrast(101%) opacity(100%)
+}

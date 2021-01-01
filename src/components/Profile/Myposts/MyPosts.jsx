@@ -1,15 +1,18 @@
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
-const MyPosts = () => {
+import Profile from './../Profile'
+const MyPosts = (props) => {
 
   let post__data = [
-    {likes: 1000, message: 'hi, how a you?'},
-    {likes: 2, message: 'олололо'},
-    {likes: 93, message: 'тролололо'},
-    {likes: 40, message: 'кек'},
-    {likes: 1, message: 'пыщ'},
-    {likes: 16, message: 'lil'}
-]
+    {id: 1, likes: 1000, message: 'hi, how a you?'},
+    {id: 2, likes: 2, message: 'олололо'},
+    {id: 3, likes: 93, message: 'тролололо'},
+    {id: 4, likes: 40, message: 'кек'},
+    {id: 5, likes: 1, message: 'пыщ'},
+    {id: 6, likes: 16, message: 'lil'}
+  ]
+
+  let posts__element = post__data.map ( p => <Post message={p.message} likes={p.likes}/>)
 
     return (
       <div>
@@ -21,13 +24,10 @@ const MyPosts = () => {
         <div>
             <button>Add post</button>
         </div>
-        
-        
+              
       </div>
       <div className={s.posts}>
-        <Post message={post__data[0].message} likes={post__data[0].likes}/>
-        <Post message={post__data[1].message} likes={post__data[1].likes}/>
-       
+        {posts__element}
       </div>
     </div>
     )

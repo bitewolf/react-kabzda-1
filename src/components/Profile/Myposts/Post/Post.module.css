@@ -2,11 +2,31 @@
  .item {
      color: darkorchid;
      display: flex;
+     
      font-family: 'Roboto', sans-serif;
+     border: solid 1px #999;
+     border-radius: 10px;
+     padding: 5px;
+     margin-top: 5px;
+     width: 50%;
  } 
  .item img {
      width: 66px;
  }
  .item div {
     padding-left: 5px;
+}
+
+.message {
+    color: #333;
+    width: 70%;
+}
+
+.likes {
+    color:crimson;
+    width: 15%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
 }

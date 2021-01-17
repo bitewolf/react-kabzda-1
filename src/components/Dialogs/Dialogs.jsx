@@ -1,22 +1,25 @@
-import { NavLink } from 'react-router-dom'
 import Dialog__item from './DialogItem/DialogItem'
 import s from './Dialogs.module.css'
 import Dialogs__message from './Message/Message'
 import React from 'react'
   
 const Dialogs = (props) => {
+    let state = props.messagesPage
 
-    let dialogs__elements = props.state.dialogs__data
+    let dialogs__elements = state.dialogs__data
     .map ( dialog => <Dialog__item name={dialog.name} id={dialog.id} avatar={dialog.avatar}/>)
 
-    let message__elements = props.state.message__data
+    let message__elements = state.message__data
     .map ( message => <Dialogs__message message={message.message}/>)
     
-    let newMessage = React.createRef();
+    let newMessageBody =  state.newMessageBody;
 
-    let addMessage = () => {
-      let text = newMessage.current.value;
-      alert(text)
+    let onSendMessageClick = () => {
+      props.sendMessage()
+    }
+    let onNewMessageChange = (e) => {
+      let body = e.target.value
+      props.updateNewMessageBody(body)
     }
 
     return (
@@ -31,10 +34,12 @@ const Dialogs = (props) => {
             </div>
             <div  className={s.posts__block}>
                 <div>
-                    <textarea ref={newMessage}></textarea>
+                    <textarea   value={newMessageBody}
+                                onChange={onNewMessageChange}
+                                placeholder='Ender your message'></textarea>
                 </div>
                 <div>
-                    <button onClick={addMessage}>Add message</button>
+                    <button onClick={ onSendMessageClick }>Add message</button>
                 </div>
             </div>
         </div>

@@ -6,10 +6,11 @@ import musicLogo from './img/music.svg'
 import settingsLogo from './img/settings.svg'
 import { NavLink } from 'react-router-dom'
 import React from 'react'
+import Sidebar from './Sidebar/Sidebar'
 
 const Navbar = (props) => {
   
-    return (
+   return (
       <nav className={s.nav}>
         <div className={s.item}>
          <img className={s.active ? s.iconActive : s.icon} src={profileLogo} alt=""/>
@@ -31,23 +32,7 @@ const Navbar = (props) => {
         <img className={s.icon} src={settingsLogo} alt=""/>
          <NavLink to="/settings" activeClassName={s.active}>Settings</NavLink> 
         </div>
-        <div className={s.sidebar}>
-          <div className={s.tag}>Friends</div>
-          <div className={s.friends}>
-            <div className={s.friend}>
-              <img className={s.avatar} src={props.state.friends[0].avatar} alt=""/>
-              <div className={s.name}>{props.state.friends[0].name}</div>
-            </div>
-            <div className={s.friend}>
-              <img className={s.avatar} src={props.state.friends[1].avatar} alt=""/>
-              <div className={s.name}>{props.state.friends[1].name}</div>
-            </div>
-            <div className={s.friend}>
-              <img className={s.avatar} src={props.state.friends[2].avatar} alt=""/>
-              <div className={s.name}>{props.state.friends[2].name}</div>
-            </div>
-          </div>
-        </div>
+        {/* <Sidebar></Sidebar> */}
 
       </nav>
     )

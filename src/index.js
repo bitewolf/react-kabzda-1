@@ -9,12 +9,13 @@ import { Provider } from './StoreContext';
 
 
 
-let rerenderEntireTree = () => {
+let rerenderEntireTree = (state) => {
+
   ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
           <Provider store={store}>
-              <App />
+              <App sidebar={state.sidebar}/>
           </Provider>
       </BrowserRouter>
     </React.StrictMode>,

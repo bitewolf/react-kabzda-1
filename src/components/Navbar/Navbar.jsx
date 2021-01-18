@@ -32,7 +32,7 @@ const Navbar = (props) => {
         <img className={s.icon} src={settingsLogo} alt=""/>
          <NavLink to="/settings" activeClassName={s.active}>Settings</NavLink> 
         </div>
-        {/* <Sidebar></Sidebar> */}
+        <Sidebar sidebar={props.sidebar} />
 
       </nav>
     )

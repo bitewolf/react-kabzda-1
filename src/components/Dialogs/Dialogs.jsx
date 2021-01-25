@@ -7,10 +7,10 @@ const Dialogs = (props) => {
     let state = props.messagesPage
 
     let dialogs__elements = state.dialogs__data
-    .map ( dialog => <Dialog__item name={dialog.name} id={dialog.id} avatar={dialog.avatar}/>)
+    .map ( dialog => <Dialog__item name={dialog.name} key={dialog.id} id={dialog.id} avatar={dialog.avatar}/>)
 
     let message__elements = state.message__data
-    .map ( message => <Dialogs__message message={message.message}/>)
+    .map ( message => <Dialogs__message message={message.message} key={message.id}/>)
     
     let newMessageBody =  state.newMessageBody;
 
@@ -18,6 +18,7 @@ const Dialogs = (props) => {
       props.sendMessage()
     }
     let onNewMessageChange = (e) => {
+    
       let body = e.target.value
       props.updateNewMessageBody(body)
     }

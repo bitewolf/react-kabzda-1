@@ -1,18 +1,16 @@
 import React from 'react'
 import styles from './users.module.css'
 import { unfollowAC } from '../../redux/users-reducer'
+import * as axios from 'axios'
 
 let Users = (props) => {
-debugger
+
     if (props.users.length === 0) {
-        props.setUsers(
-            [
-                {id: 1, photoUrl: 'https://izhevskinfo.ru/pictures/news/91108.jpg', followed: false, fullName: 'Dmitry', status: 'I am a boss', location: {city: 'Braslav', country: 'Belarus'}},
-                {id: 2, photoUrl: 'https://izhevskinfo.ru/pictures/news/91108.jpg', followed: true, fullName: 'Sasha', status: 'I am a boss', location: {city: 'Lviv', country: 'Ukraine'}},
-                {id: 3, photoUrl: 'https://izhevskinfo.ru/pictures/news/91108.jpg', followed: false, fullName: "Ashot", status: 'I am a boss', location: {city: 'Piter', country: 'Russia'}}
-        
-            ]
-    )
+
+        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response.data.items => {
+            debugger
+            props.setUsers()
+        })
 
     
         }

@@ -4,54 +4,6 @@ import userPhoto from '../../assets/images/user.png'
 
 let Users = (props) => {
 
-
-//   let salariesCompany = {
-//         Ivan: 1200,
-//         Irina: 800,
-//         Alex: 1050,
-//         Anton: 1460,
-//         Egor: 100
-//       }
-    
-//     let averageSalary = 0
-//     let summSalary = 0
-//     let hasMaxSalary = ''
-//     let MaxSalary = 0
-//     let hasMinSalary = ''
-//     let MinSalary = Number.MAX_SAFE_INTEGER
-//     let i = 0
-
-//     let report = {
-//         averageSalary: 0,
-//         hasMaxSalary: '',
-//         hasMinSalary: ''
-//       }
-
-      
-//     function getSalaryReport(salaries) {
-//         for (let key in salaries) {
-//             i++
-//             summSalary = summSalary + salaries[key]
-//             averageSalary = summSalary/i
-            
-//             if (salaries[key] >= MaxSalary) {
-//                 MaxSalary = salaries[key]
-//                 hasMaxSalary = key
-//             }
-//             if (salaries[key] <= MinSalary) {
-//                 MinSalary = salaries[key]
-//                 hasMinSalary = key
-//             }
-//             report.averageSalary = averageSalary
-//             report.hasMaxSalary = hasMaxSalary
-//             report.hasMinSalary = hasMinSalary
-//             console.log(report)
-//         }
-               
-//     }  
-    
-//     getSalaryReport(salariesCompany)
-    
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
 
         let pages = []
